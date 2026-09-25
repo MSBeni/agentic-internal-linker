@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-internal-linker"
+version = "0.1.0"
+description = "A safe, deterministic multi-agent workflow for adding internal links to Markdown."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Moe Salimibeni" }]
+keywords = ["internal-linking", "markdown", "seo", "agents", "content"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Text Processing :: Markup",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2,<2",
+  "pytest>=8,<9",
+  "ruff>=0.11,<1",
+]
+
+[project.scripts]
+agentic-internal-linker = "agentic_internal_linker.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/MSBeni/agentic-internal-linker"
+Issues = "https://github.com/MSBeni/agentic-internal-linker/issues"
+Source = "https://github.com/MSBeni/agentic-internal-linker"
+
+[tool.setuptools.packages.find]
+include = ["agentic_internal_linker*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "S", "RUF"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]

@@ -1,0 +1,17 @@
+[
+  {
+    "url": "https://example.com/guides/internal-linking-strategy",
+    "title": "Internal Linking Strategy",
+    "description": "Plan contextual links between related pages."
+  },
+  {
+    "url": "https://example.com/guides/content-audit-checklist",
+    "title": "Content Audit Checklist",
+    "description": "Find outdated and orphaned pages before improving navigation."
+  },
+  {
+    "url": "https://example.com/guides/topic-cluster-guide",
+    "title": "Topic Cluster Guide",
+    "description": "Organize related articles around a central subject."
+  }
+]
