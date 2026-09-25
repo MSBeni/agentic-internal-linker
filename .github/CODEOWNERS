@@ -1,0 +1,8 @@
+# Repository-wide ownership. Branch rules require pull requests, while this
+# file makes the expected reviewer visible without blocking a sole maintainer.
+* @MSBeni
+
+# Treat automation and dependency policy as security-sensitive.
+/.github/ @MSBeni
+/pyproject.toml @MSBeni
+/SECURITY.md @MSBeni
